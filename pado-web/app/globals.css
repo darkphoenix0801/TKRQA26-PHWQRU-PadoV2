@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --background: #FAF8F5; /* Creamy shade */
+  --foreground: #1e1e1a; /* Soft Charcoal */
+  --muted: #868682;
+  --border: rgba(30, 30, 26, 0.08);
+  --surface: rgba(255, 255, 255, 0.65); /* Floating semi-transparent glass tiles */
+  --surface-hover: rgba(255, 255, 255, 0.85);
+}
+
+/* Glassmorphism iOS Style Utility Classes */
+.glass-tile {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(142, 137, 126, 0.08);
+  border-radius: 20px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-tile:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 16px 40px 0 rgba(142, 137, 126, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}

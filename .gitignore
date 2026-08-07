@@ -1,0 +1,13 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+pado-web/.next/
+pado-web/node_modules/
+*.wav
+*.mp3
+.tempmediaStorage/
+db.sqlite3
+pado.db
+.env
