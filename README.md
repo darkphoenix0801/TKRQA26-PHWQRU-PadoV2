@@ -116,4 +116,5 @@ npm run dev
 Contributions are welcome! Please feel free to submit a Pull Request or open an Issue for discussion.
 
 ## 📄 License
-This project is licensed under the MIT License.
+This project is licensed under the team Bloodline Agents and Completely Rights Reserved by DarkPhoenix 
+All rights are reserved. 
