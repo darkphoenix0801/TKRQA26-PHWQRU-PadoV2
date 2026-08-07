@@ -2,7 +2,10 @@ import sqlite3
 import os
 import json
 
-DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pado.db")
+if os.environ.get("RENDER"):
+    DB_PATH = "/data/pado.db"
+else:
+    DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pado.db")
 
 def get_db_connection():
     conn = sqlite3.connect(DB_PATH)
